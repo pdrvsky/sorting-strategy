@@ -32,9 +32,9 @@ public class Client {
         double[] dataNonSort = DataGenerator.generate(100000);
         
         /* Wzorzec Stratega */
-        Client.setSortingMethod(new Selectionsort());
+        Client.setSortingMethod(new Quicksort());
         double[] dataSorted = Client._sortMethod.sortData(dataNonSort);
-       
+        
         System.out.println("Time: " + Client._sortMethod.GetElapsedTime());
     }
 }
