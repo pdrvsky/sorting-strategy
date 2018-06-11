@@ -5,10 +5,27 @@
  */
 package sort.methods;
 
+import sort.strategy.ISortMethod;
+import sort.strategy.Stopwatch;
+
 /**
  *
  * @author LeopardProMK
  */
-public class Bubblesort {
-    /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-babelkowe-bubblesort.html */
+public class Bubblesort implements ISortMethod {
+    private Stopwatch _stopwatch;
+    private double _elapsedTime;
+
+    @Override
+    public Comparable[] sortData(Comparable[] inputData) {
+        _stopwatch = new Stopwatch();
+        // TODO: Implementation
+        _elapsedTime = _stopwatch.elapsedTime();
+        return inputData;
+    }
+
+    @Override
+    public double GetElapsedTime() {
+        return _elapsedTime;
+    }
 }
