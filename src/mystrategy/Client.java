@@ -6,7 +6,7 @@
 package mystrategy;
 
 import data.DataGenerator;
-import sort.methods.Quicksort;
+import sort.methods.*;
 import sort.strategy.ISortMethod;
 
 /**
@@ -32,7 +32,7 @@ public class Client {
         double[] dataNonSort = DataGenerator.generate(100000);
         
         /* Wzorzec Stratega */
-        Client.setSortingMethod(new Quicksort());
+        Client.setSortingMethod(new Selectionsort());
         double[] dataSorted = Client._sortMethod.sortData(dataNonSort);
        
         System.out.println("Time: " + Client._sortMethod.GetElapsedTime());
