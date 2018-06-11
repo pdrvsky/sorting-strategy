@@ -17,7 +17,7 @@ public class Selectionsort implements ISortMethod {
     private double _elapsedTime;
 
     @Override
-    public Comparable[] sortData(Comparable[] inputData) {
+    public double[] sortData(double[] inputData) {
         _stopwatch = new Stopwatch();
         // TODO: Implementation
         _elapsedTime = _stopwatch.elapsedTime();

@@ -10,6 +10,6 @@ package sort.strategy;
  * @author student
  */
 public interface ISortMethod {
-    public Comparable[] sortData(Comparable[] inputData);
+    public double[] sortData(double[] inputData);
     public double GetElapsedTime();
 }

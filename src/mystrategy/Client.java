@@ -6,13 +6,21 @@
 package mystrategy;
 
 import data.DataGenerator;
+import sort.methods.Quicksort;
+import sort.strategy.ISortMethod;
 
 /**
  *
  * @author LeopardProMK
  */
 public class Client {
+    
+    private static ISortMethod _sortMethod;
 
+    private static void setSortingMethod(ISortMethod sortMethod) {
+        Client._sortMethod = sortMethod;
+    };
+    
     /**
      * @param args the command line arguments
      */
@@ -23,9 +31,10 @@ public class Client {
         
         double[] dataNonSort = DataGenerator.generate(100000);
         
-       /* Wzorzec Stratega */
-        //...
+        /* Wzorzec Stratega */
+        Client.setSortingMethod(new Quicksort());
+        double[] dataSorted = Client._sortMethod.sortData(dataNonSort);
        
-        System.out.println("Time: ??");
+        System.out.println("Time: " + Client._sortMethod.GetElapsedTime());
     }
 }
